@@ -1,0 +1,148 @@
+// sass -v     press enter
+//  cd /D перетягнути файл з провідника в командну стрічку
+//  sass --watch scss\style1.scss:css\style1.css scss\style2.scss:css\style2.css
+body {
+  background-color: $colorContentBackground;
+  font-family: sans-serif;
+}
+.main-wrapper {
+  max-width: 1900px;
+  width: 960px;
+  margin: 0 auto;
+}
+p {
+  color: $colorText;
+  line-height: 1.5;
+}
+input,
+textarea {
+  background-color: $colorContentBackground;
+}
+//------------header-------------------------
+.logo {
+  width: 40%;
+  float: left;
+  img {
+    max-width: 670px;
+    width: 340px;
+    margin: 0 auto;
+  }
+}
+nav {
+  width: 60%;
+  padding: 2% 0;
+  margin-top: 14%;
+  float: right;
+  border-top: 1px solid $colorBorder;
+  border-bottom: 1px solid $colorBorder;
+  a {
+    padding: 0 11%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $colorBorderHeaders;
+  }
+}
+//--------------toolbar-------------------------
+.toolbar {
+  margin-bottom: 2%;
+  clear: both; // for float in header;
+  overflow: hidden; // for inside float;
+  input {
+    float: right;
+    border: 1px solid $colorBorderHeaders;
+    padding: 1% 2%;
+  }
+  input::placeholder {
+    color: $colorBorderHeaders;
+  }
+}
+//-------------post-list-------------------------
+article {
+  width: 46%;
+  margin-bottom: 1%;
+  padding: 1%;
+  background-color: $colorArticleBackground;
+  div {
+    padding: 2%;
+  }
+  img {
+    max-width: 880px;
+    width: 440px;
+    height: auto;
+  }
+  .post-description {
+    color: $colorPostDescription;
+    font-size: 0.8em;
+    border-bottom: 1px solid $colorBorder;
+  }
+  h3 {
+    margin-top: 1%;
+    margin-bottom: 0;
+    color: $colorPostListH3;
+    text-transform: uppercase;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+article:nth-child(2n) {
+  float: right;
+  clear: right;
+}
+article:nth-child(2n + 1) {
+  float: left;
+  clear: left;
+}
+//--------------about section------------------------
+.about {
+  padding: 40px 0;
+  clear: both;
+  img {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  h1 + p {
+    margin-top: 0;
+  }
+}
+//---------------contact-form--------------------------------
+h1,
+h4 {
+  margin: 0;
+  color: $colorBorderHeaders;
+  text-align: end;
+  text-transform: uppercase;
+  box-sizing: content-box;
+}
+label {
+  margin: 20px 0;
+  display: block;
+}
+.form-control {
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: $colorFormText;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1% 2%;
+  border: 1px solid $colorBorder;
+}
+button {
+  padding: 1% 8%;
+  background-color: $colorBorderHeaders;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+}
+form {
+  text-align: end;
+}
+//---------------footer-----------------------
+footer {
+  color: $colorText;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
