@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font: normal normal 1vw "Open sans"; }
+
+* {
+  box-sizing: border-box; }
+
+.resize {
+  max-width: 1500px;
+  width: 100vw;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+.button {
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.6vw 1vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.15vw solid #ffffff; }
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+h1 {
+  font-size: 3.5vw;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center; }
+  h1 span {
+    font-size: 6vw;
+    font-family: sans-serif; }
+
+h2 {
+  font-weight: normal; }
+
+h4 {
+  font-weight: normal;
+  color: #ffffff;
+  position: absolute;
+  left: 2vw;
+  bottom: 2vw;
+  margin: 0; }
+
+header {
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/apples.jpg) no-repeat center center;
+  background-size: cover; }
+  header a {
+    color: #ffffff; }
+
+.navigation {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  align-items: center; }
+  .navigation nav {
+    text-align: end; }
+    .navigation nav a {
+      margin-left: 1vw; }
+
+.header {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 2fr;
+  align-items: center; }
+  .header > div > a {
+    letter-spacing: 0.2em;
+    text-transform: uppercase; }
+  .header div:last-child {
+    text-align: center; }
+  .header nav a {
+    margin-left: 2vw; }
+  .header p {
+    text-align: center; }
+  .header .button {
+    padding: 1vw 6vw; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 22vw auto 22vw; }
+
+section:nth-of-type(2n + 1) {
+  align-self: center; }
+
+section:nth-of-type(2) {
+  background-color: #f3f3f3; }
+  section:nth-of-type(2) > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 18vw auto 18vw; }
+  section:nth-of-type(2) h2 {
+    text-align: center;
+    margin-top: 10vw; }
+  section:nth-of-type(2) form {
+    background-color: #ffffff;
+    margin: 4vw;
+    padding: 1vw;
+    align-items: center; }
+    section:nth-of-type(2) form label {
+      font-size: 1.5vw;
+      display: grid;
+      grid-template-columns: 22vw auto;
+      grid-template-rows: 1fr;
+      align-items: center; }
+
+form {
+  display: grid;
+  grid-template-columns: auto 8vw;
+  grid-template-rows: 1fr; }
+
+input,
+button {
+  height: 4vw;
+  padding: 0 1.2vw; }
+
+input {
+  background: #f3f3f3;
+  border: 1px outset #343638; }
+
+input[type="email"]::placeholder {
+  font-size: 1vw;
+  color: #000000; }
+
+button {
+  background-color: #343638;
+  color: #ffffff;
+  font-size: 1vw;
+  border: none; }
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1vw; }
+
+.images {
+  height: 25vw;
+  width: 100%;
+  box-shadow: inset 0 -4vw 8vw rgba(0, 0, 0, 0.5); }
+  .images a {
+    position: absolute;
+    top: 2vw;
+    right: 2vw; }
+
+.text {
+  align-self: center;
+  text-align: center; }
+
+.shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1vw; }
+  .shop header {
+    position: relative; }
+  .shop article:nth-of-type(2n + 1) {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw; }
+    .shop article:nth-of-type(2n + 1) header {
+      background: url(../img/sample.jpg) no-repeat;
+      background-size: cover; }
+  .shop article:nth-of-type(2n) {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw; }
+    .shop article:nth-of-type(2n) header {
+      background: url(../img/sample3.jpg) no-repeat;
+      background-size: cover; }
+
+.vacancies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  grid-gap: 0 2vw; }
+  .vacancies p {
+    color: #9e9e9e;
+    margin-bottom: 0.3em; }
+  .vacancies article:nth-of-type(2) p {
+    font-style: italic; }
+  .vacancies button,
+  .vacancies input {
+    height: 2.5vw;
+    width: 100%;
+    padding: 0 0.5vw; }
+  .vacancies span {
+    color: #e8e8e8; }
+
+hr {
+  background-color: #e8e8e8;
+  border: 0;
+  height: 2px; }
+
+/*# sourceMappingURL=style.css.map */

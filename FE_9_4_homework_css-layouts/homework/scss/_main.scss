@@ -1,0 +1,240 @@
+//cd /D d:\epam\FE_9_4_homework_css-layouts\homework\
+//sass --watch scss\style.scss:css\style.css
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font: normal normal 1vw "Open sans";
+}
+* {
+  box-sizing: border-box;
+}
+.resize {
+  max-width: 1500px; //1500px
+  width: 100vw;
+  margin: 0 auto;
+  //border: 1px solid red;
+}
+a {
+  text-decoration: none;
+  color: $colorButton;
+}
+.button {
+  color: $colorHeader;
+  display: inline-block;
+  padding: 0.6vw 1vw;
+  background-color: rgba($color: $colorButton, $alpha: 0.5);
+  border: 0.15vw solid $colorHeader;
+}
+.button:hover {
+  background-color: rgba($color: $colorButton, $alpha: 0.7);
+}
+h1 {
+  font-size: 3.5vw;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  span {
+    font-size: 6vw;
+    font-family: sans-serif;
+  }
+}
+h2 {
+  font-weight: normal;
+}
+h4 {
+  font-weight: normal;
+  color: $colorHeader;
+  position: absolute;
+  left: 2vw;
+  bottom: 2vw;
+  margin: 0;
+}
+header {
+  color: $colorHeader;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/apples.jpg) no-repeat center center;
+  background-size: cover;
+  a {
+    color: $colorHeader;
+  }
+  //border: 1px solid blue;
+}
+.navigation {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  nav {
+    text-align: end;
+    a {
+      margin-left: 1vw;
+    }
+  }
+}
+.header {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 2fr;
+  align-items: center;
+  & > div {
+    & > a {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+  }
+  div:last-child {
+    text-align: center;
+  }
+  nav a {
+    margin-left: 2vw;
+  }
+  p {
+    text-align: center;
+  }
+  .button {
+    padding: 1vw 6vw;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 22vw auto 22vw; //50vh 50vh
+}
+section:nth-of-type(2n + 1) {
+  align-self: center;
+}
+section:nth-of-type(2) {
+  background-color: $colorGreyBg;
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 18vw auto 18vw; //35vh 35vh
+  }
+  h2 {
+    text-align: center;
+    margin-top: 10vw; //20vh
+  }
+  form {
+    background-color: $colorHeader;
+    margin: 4vw;
+    padding: 1vw;
+    align-items: center;
+    label {
+      font-size: 1.5vw;
+      display: grid;
+      grid-template-columns: 22vw auto;
+      grid-template-rows: 1fr;
+      align-items: center;
+    }
+  }
+}
+form {
+  display: grid;
+  grid-template-columns: auto 8vw;
+  grid-template-rows: 1fr;
+}
+input,
+button {
+  height: 4vw;
+  padding: 0 1.2vw;
+}
+input {
+  background: $colorGreyBg;
+  border: 1px outset $colorBgBut;
+}
+input[type="email"]::placeholder {
+  font-size: 1vw;
+  color: $colorButton;
+}
+button {
+  background-color: $colorBgBut;
+  color: $colorHeader;
+  font-size: 1vw;
+  border: none;
+}
+button:hover {
+  background-color: rgba($color: $colorButton, $alpha: 0.9);
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1vw;
+}
+.images {
+  height: 25vw;
+  width: 100%;
+  //border: 1px solid $colorHeader;
+  box-shadow: inset 0 -4vw 8vw rgba(0, 0, 0, 0.5);
+  a {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+  }
+}
+.text {
+  align-self: center;
+  text-align: center;
+}
+.shop {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1vw; //grid-gap: 1vw 0;
+  header {
+    position: relative;
+  }
+  article:nth-of-type(2n + 1) {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw; //grid-gap: 0 1vw;
+    header {
+      background: url(../img/sample.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+  article:nth-of-type(2n) {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw;
+    header {
+      background: url(../img/sample3.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.vacancies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  grid-gap: 0 2vw;
+  p {
+    color: $colorFootCol;
+    margin-bottom: 0.3em;
+  }
+  article:nth-of-type(2) {
+    p {
+      font-style: italic;
+    }
+  }
+  button,
+  input {
+    height: 2.5vw;
+    width: 100%;
+    padding: 0 0.5vw;
+  }
+  span {
+    color: $colorFootCol3hour;
+  }
+}
+hr {
+  background-color: $colorFootCol3hour;
+  border: 0;
+  height: 2px;
+}
