@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #0a1223;
+  font: normal normal 16px sans-serif;
+}
+a {
+  color: #5d5d5d;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 30px;
+}
+a:focus,
+a:active,
+a:hover {
+  color: #54597d;
+}
+p {
+  color: #5d5d5d;
+  text-align: justify;
+  text-indent: 20px;
+}
+section {
+  padding: 30px;
+  color: #fff;
+}
+nav {
+  text-align: right;
+  padding: 0 30px;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+}
+h2 {
+  margin: 150px 10px;
+  text-align: center;
+  font-size: 5vw;
+}
+.wrapper-articles {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+article {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #ddd, #5d5d5d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+article:nth-of-type(2n + 1) .wrap-in-article {
+  float: left;
+  clear: left;
+}
+article:nth-of-type(2n + 1) img {
+  float: right;
+  clear: right;
+}
+article:nth-of-type(2n) .wrap-in-article {
+  float: right;
+  clear: right;
+}
+article:nth-of-type(2n) img {
+  float: left;
+  clear: left;
+}
+.wrap-in-article,
+img {
+  width: 48%;
+}
+
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 48px;
+  }
+  .wrapper-articles {
+    width: 500px;
+    margin: 0 auto;
+  }
+  nav {
+    text-align: center;
+  }
+  .wrap-in-article,
+  img {
+    width: 100%;
+  }
+  .wrap-in-article {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    background-color: #fff;
+  }
+  section {
+    padding: 0;
+  }
+  .wrapper-articles {
+    width: 100%;
+  }
+  article {
+    padding: 0 30px;
+  }
+  h2 {
+    padding: 0 30px;
+  }
+  h2,
+  h3 {
+    color: #000;
+  }
+  nav {
+    padding: 0;
+    position: relative;
+  }
+  li {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 2px solid #ddd;
+  }
+  a {
+    margin: 0;
+  }
+  a:focus,
+  a:hover {
+    font-weight: bold;
+  }
+  .btn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50% 50%;
+    background-color: #5ebcff;
+    color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .btn:focus,
+  .btn:hover {
+    color: #fff;
+  }
+}

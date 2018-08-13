@@ -1,0 +1,186 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+html {
+  --bg-color--dark: #0a1223;
+  --bg-color--light: #fff;
+  --link: #5d5d5d;
+  --link--active: #54597d;
+  --link--hover: #54597d;
+  --article-title: #ddd;
+  --article-title--dark: #000;
+  --thumbnail--description: #5d5d5d;
+
+  /* These styles are needed only for media query max-width: 575px */
+
+  /* The 'Up' button (circle button at right bottom corner) */
+  --btn-color: #fff;
+  --btn-bg-color: #5ebcff;
+
+  --navigation-border-bottom: #ddd;
+  --thumbnail-title: #484747;
+}
+
+/* Your styles go here */
+* {
+  margin: 0;
+}
+body {
+  background-color: var(--bg-color--dark);
+  font: normal normal 16px sans-serif;
+}
+a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 30px;
+}
+a:active {
+  color: var(--link--active);
+}
+a:focus,
+a:hover {
+  color: var(--link--hover);
+}
+p {
+  color: var(--thumbnail--description);
+  text-align: justify;
+  text-indent: 20px;
+}
+section {
+  padding: 30px; /*2vw*/
+  color: var(--bg-color--light);
+}
+nav {
+  text-align: right;
+  padding: 0 30px;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+}
+h2 {
+  margin: 150px 10px; /*10vw 0*/
+  text-align: center;
+  font-size: 5vw;
+}
+.wrapper-articles {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+article {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+h3 {
+  /*color: var(#ddd);*/
+  font-size: 32px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(
+    to right,
+    var(--article-title),
+    var(--thumbnail--description)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+article:nth-of-type(2n + 1) .wrap-in-article {
+  float: left;
+  clear: left;
+}
+article:nth-of-type(2n + 1) img {
+  float: right;
+  clear: right;
+}
+article:nth-of-type(2n) .wrap-in-article {
+  float: right;
+  clear: right;
+}
+article:nth-of-type(2n) img {
+  float: left;
+  clear: left;
+}
+.wrap-in-article,
+img {
+  width: 48%;
+}
+
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 48px;
+  }
+  .wrapper-articles {
+    width: 500px;
+    margin: 0 auto;
+  }
+  nav {
+    text-align: center;
+  }
+  .wrap-in-article,
+  img {
+    width: 100%;
+  }
+  .wrap-in-article {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    background-color: var(--bg-color--light);
+  }
+  section {
+    padding: 0;
+  }
+  .wrapper-articles {
+    width: 100%;
+  }
+  article {
+    padding: 0 30px;
+  }
+  h2 {
+    color: var(--article-title--dark);
+    padding: 0 30px;
+  }
+  h3 {
+    color: var(--article-title--dark);
+  }
+  nav {
+    padding: 0;
+  }
+  li {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 2px solid var(--navigation-border-bottom);
+  }
+  a {
+    margin: 0;
+  }
+  a:focus,
+  a:hover {
+    font-weight: bold;
+  }
+  .btn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50% 50%;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-color);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .btn:focus,
+  .btn:hover {
+    color: var(--btn-color);
+  }
+}
