@@ -8,14 +8,14 @@ const forEach = (array, callback) => {
 
 const map = (array, callback) => {
   let arrayNew = [];
-  forEach(array, element => arrayNew.push(callback(element)));
+  forEach(array, (element, i, array) => arrayNew.push(callback(element, i, array)));
   return arrayNew;
 };
 
 const filter = (array, callback) => {
   let arrayNew = [];
-  forEach(array, element => {
-    if (callback(element)) {
+  forEach(array, (element, i, array) => {
+    if (callback(element, i, array)) {
       arrayNew.push(element);
     }
   });
