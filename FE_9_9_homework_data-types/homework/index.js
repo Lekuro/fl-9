@@ -30,7 +30,7 @@ const getAdultAppleLovers = array => {
 const keys = obj => {
   let arrKeys = [];
   for (let key in obj) {
-    if (key) {
+    if (obj.hasOwnProperty(key)) {
       arrKeys.push(key);
     }
   }
@@ -40,7 +40,7 @@ const keys = obj => {
 const values = obj => {
   let arrValues = [];
   for (let key in obj) {
-    if (key) {
+    if (obj.hasOwnProperty(key)) {
       arrValues.push(obj[key]);
     }
   }
