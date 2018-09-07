@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+.game {
+  margin: 2px auto 0;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.insideGame,
+.insideGameFinished {
+  float: left;
+  border: 1px solid #a5a5a5;
+  box-sizing: border-box;
+}
+.inside {
+  float: left;
+  border: 0px solid #00ff00;
+}
+.main {
+  width: 800px;
+  height: 600px;
+  margin: 0px auto;
+}
+/*setings panel*/
+.setings-panel {
+  display: flex;
+}
+.setings-panel > div {
+  margin-right: 50px;
+}
+.setings-panel label {
+  margin-left: 15px;
+}
+.generateNew {
+  margin-left: auto;
+  background: #12d3ab;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+.generateNew:focus {
+  border: none;
+}
+.generateNew:hover {
+  background: #0d866c;
+}
+#out {
+  margin-top: 7px;
+}

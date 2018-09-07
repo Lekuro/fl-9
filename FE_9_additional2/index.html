@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mosaic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="setings-panel">
+      <div>
+        <input type="color" id="border_color" name="color" value="#A5A5A5" />
+        <label for="border_color">Mosaic border color</label>
+      </div>
+      <div>
+        <input type="color" id="background_color" name="color" value="#6BCDCC" />
+        <label for="background_color">Fragment background color</label>
+      </div>
+      <div id="out"></div>
+      <button class="generateNew">Generate New</button>
+    </div>
+
+    <div id="root"></div>
+  </div>
+
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
