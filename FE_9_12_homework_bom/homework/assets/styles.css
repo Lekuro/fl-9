@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+section {
+  width: 300px;
+  margin: 0 auto;
+}
+h1,
+p,
+.simple {
+  text-align: center;
+}
+/*a {
+  text-decoration: none;
+  color: #000000;
+  background-color: #dddddd;
+  padding: 5px 10px;
+  border: 2px solid #aaaaaa;
+  border-radius: 10px;
+  display: inline-block;
+}
+.simple > a {
+  padding: 5px 20px;
+}*/
+div.twoButton {
+  margin-top: 20px;
+}
+.addNewTask,
+.saveCanges,
+.cancel {
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.addNewTask {
+  padding: 5px 20px;
+}
+.saveCanges {
+  float: right;
+  /*padding: 5px 10px;
+  border: 2px solid #aaaaaa;*/
+}
+input {
+  width: 100%;
+}
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+li {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 35px auto 35px;
+  grid-template-rows: 35px;
+}
+.unchecked,
+.checkeed,
+.delete,
+.textButton {
+  cursor: pointer;
+  border: 0;
+  background-color: #ffffff; /*unset;*/
+}
+.unchecked {
+  background-image: url("./img/todo-s.png");
+}
+.checked {
+  background-image: url("./img/done-s.png");
+  background-size: cover;
+  cursor: not-allowed;
+}
+.delete {
+  float: right;
+  background-image: url("./img/remove-s.jpg");
+}
